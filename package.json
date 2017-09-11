@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/featureflow/featureflow-fiveminute-node#readme",
   "dependencies": {
-    "featureflow-node-sdk": "^0.1.3"
+    "featureflow-node-sdk": "^0.6.0"
   }
 }
