@@ -91,12 +91,6 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-eventsource@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-0.2.2.tgz#8ac0576cbd16ee83478b3faaf27bdc7b7c8fcca9"
-  dependencies:
-    original "^1.0.0"
-
 extend@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.0.tgz#5a474353b9f3353ddd8176dfd37b91c83a46f1d4"
@@ -105,16 +99,14 @@ extsprintf@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
 
-featureflow-node-sdk@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/featureflow-node-sdk/-/featureflow-node-sdk-0.1.3.tgz#68e8c79a4fb681f66b30bf83776f4a73bc1ace8c"
+featureflow-node-sdk@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/featureflow-node-sdk/-/featureflow-node-sdk-0.6.3.tgz#90606167a9958c5bd3b86d84e1230323099f7925"
   dependencies:
     big-integer "^1.6.17"
     debug "^2.6.2"
-    eventsource "^0.2.2"
     request "^2.81.0"
     sha1-hex "^1.0.0"
-    tiny-emitter "^1.1.0"
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -229,12 +221,6 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-original@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/original/-/original-1.0.0.tgz#9147f93fa1696d04be61e01bd50baeaca656bd3b"
-  dependencies:
-    url-parse "1.0.x"
-
 performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -246,10 +232,6 @@ punycode@^1.4.1:
 qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
-
-querystringify@0.0.x:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-0.0.4.tgz#0cf7f84f9463ff0ae51c4c4b142d95be37724d9c"
 
 request@^2.81.0:
   version "2.81.0"
@@ -277,10 +259,6 @@ request@^2.81.0:
     tough-cookie "~2.3.0"
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
-
-requires-port@1.0.x:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
 safe-buffer@^5.0.1:
   version "5.0.1"
@@ -315,10 +293,6 @@ stringstream@~0.0.4:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/stringstream/-/stringstream-0.0.5.tgz#4e484cd4de5a0bbbee18e46307710a8a81621878"
 
-tiny-emitter@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-1.1.0.tgz#ab405a21ffed814a76c19739648093d70654fecb"
-
 tough-cookie@~2.3.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.2.tgz#f081f76e4c85720e6c37a5faced737150d84072a"
@@ -334,13 +308,6 @@ tunnel-agent@^0.6.0:
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
-
-url-parse@1.0.x:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.0.5.tgz#0854860422afdcfefeb6c965c662d4800169927b"
-  dependencies:
-    querystringify "0.0.x"
-    requires-port "1.0.x"
 
 uuid@^3.0.0:
   version "3.0.1"

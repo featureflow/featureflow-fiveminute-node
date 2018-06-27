@@ -1,19 +1,16 @@
 var Featureflow = require('featureflow-node-sdk');
 
-Featureflow.init({
-  apiKey: "{{YOUR_SERVER_ENVIRONMENT_API_KEY_HERE}}",
-}, function(error, featureflow){
-  if (error){
-    return console.warn(error);
-  }
 
-  if (featureflow.evaluate('example-feature').isOn()){
-    console.log('The variant is on!');
-  }
-  else{
-    console.log('The variant is not on!');
-  }
+var featureflow = new Featureflow.Client({apiKey: '{{YOUR_SERVER_ENVIRONMENT_API_KEY_HERE}}'});
 
-  featureflow.close();
-  //Now have a look at helloworldWithContext.js for a more advanced scenario
-})
+featureflow.ready(function(){
+    if (featureflow.evaluate('example-feature').isOn()) {
+        console.log('The variant is on!');
+    }
+    else {
+        console.log('The variant is not on!');
+    }
+    //featureflow is now initialized in this block
+});
+
+//Now have a look at helloworldWithUser.js for a more advanced scenario
