@@ -1,24 +1,27 @@
 /**
- * FeatureFlow Node.js SDK - Feature Registration (Offline Development)
+ * FeatureFlow Node.js SDK - Feature Registration
  * 
- * This example demonstrates how to register features locally for offline development:
- * 1. Register features with specific values locally
- * 2. Work without API calls (perfect for development)
- * 3. Test different feature configurations
+ * This example demonstrates how to register features with the FeatureFlow SDK:
+ * 1. Register features with specific values in your code
+ * 2. Features will be automatically created in FeatureFlow if they don't exist
+ * 3. Test different feature configurations during development
  * 
  * This is useful for:
- * - Local development without internet connection
- * - Testing specific feature configurations
- * - CI/CD pipelines where you want predictable behavior
- * - Development environments where you don't want to hit the API
+ * - Pre-registering features in your application code
+ * - Ensuring features exist before they're used
+ * - Testing specific feature configurations during development
+ * - CI/CD pipelines where you want to ensure features are available
+ * 
+ * Note: This still requires an internet connection to FeatureFlow.
+ * Offline functionality will be available in an upcoming version.
  */
 
 const Featureflow = require('featureflow-node-sdk');
 
-// Initialize the FeatureFlow client with locally registered features
-// This allows you to work offline and test specific feature configurations
+// Initialize the FeatureFlow client with pre-registered features
+// These features will be automatically created in FeatureFlow if they don't exist
 const featureflow = new Featureflow.Client({
-    apiKey: '{{YOUR_SERVER_ENVIRONMENT_API_KEY_HERE}}', // Can be any string for offline mode
+    apiKey: '{{YOUR_SERVER_ENVIRONMENT_API_KEY_HERE}}', // Your actual FeatureFlow API key
     withFeatures: [
         // Register features with specific values
         new Featureflow.Feature('feature-one', 'on').build(),        // Always ON
@@ -44,9 +47,9 @@ console.log('👤 Created user:', {
     attributes: user.getAttributes()
 });
 
-console.log('🚀 Initializing FeatureFlow client with local features...');
+console.log('🚀 Initializing FeatureFlow client with pre-registered features...');
 
-// The client is ready immediately when using local features
+// The client will register features with FeatureFlow and then be ready
 featureflow.ready((error) => {
     if (error) {
         console.error('❌ Failed to initialize FeatureFlow client:', error.message);
@@ -54,7 +57,7 @@ featureflow.ready((error) => {
     }
     
     console.log('✅ FeatureFlow client initialized successfully!');
-    console.log('📝 Using locally registered features (no API calls needed)');
+    console.log('📝 Features have been registered with FeatureFlow');
     
     // Show all registered features
     const allFeatures = featureflow.evaluateAll(user);
@@ -88,5 +91,5 @@ featureflow.ready((error) => {
     console.log('🔒 FeatureFlow client closed');
 });
 
-console.log('⏳ Processing locally registered features...');
+console.log('⏳ Registering features with FeatureFlow...');
 console.log('💡 Next: Check out advanced-example.js for more advanced features!');

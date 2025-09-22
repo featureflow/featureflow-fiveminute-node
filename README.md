@@ -63,7 +63,7 @@ node helloworldWithUser.js
 
 ### 3. Feature Registration (`helloworldWithUserAndFeatureRegistration.js`)
 
-Shows how to register features locally for offline development.
+Shows how to pre-register features with FeatureFlow from your application code.
 
 ```bash
 node helloworldWithUserAndFeatureRegistration.js
@@ -71,9 +71,9 @@ node helloworldWithUserAndFeatureRegistration.js
 
 **What it does:**
 
-- Registers features locally
-- Works offline without API calls
-- Perfect for development and testing
+- Pre-registers features in your application code
+- Features are automatically created in FeatureFlow if they don't exist
+- Perfect for ensuring features are available before use
 
 ### 4. Advanced Example (`advanced-example.js`)
 
