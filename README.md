@@ -90,6 +90,22 @@ node advanced-example.js
 - Error handling
 - Event tracking
 
+### 5. Singleton with Polling (`singleton-polling-example.js`)
+
+Demonstrates a singleton FeatureFlow client with real-time polling updates.
+
+```bash
+node singleton-polling-example.js
+```
+
+**What it does:**
+
+- Creates a singleton FeatureFlow client
+- Polls for feature updates every 10 seconds
+- Demonstrates real-time feature changes
+- Runs for 1 minute to show polling behavior
+- Graceful shutdown handling
+
 ## 🔧 Configuration
 
 ### Environment Variables
@@ -154,6 +170,7 @@ const featureflow = new Featureflow.Client({
 - `npm run start:user` - Run the user-based example
 - `npm run start:registration` - Run the feature registration example
 - `npm run start:advanced` - Run the advanced example
+- `npm run start:singleton` - Run the singleton polling example
 - `npm run start:all` - Run all examples
 
 ## 🔍 Understanding the Output

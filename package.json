@@ -8,6 +8,7 @@
     "start:user": "node helloworldWithUser.js",
     "start:registration": "node helloworldWithUserAndFeatureRegistration.js",
     "start:advanced": "node advanced-example.js",
+    "start:singleton": "node singleton-polling-example.js",
     "start:all": "npm run start:basic && npm run start:user && npm run start:registration && npm run start:advanced",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

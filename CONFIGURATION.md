@@ -61,6 +61,18 @@ var featureflow = new Featureflow.Client({
 
 This will automatically create these features in your FeatureFlow dashboard if they don't already exist.
 
+### Singleton Client with Polling
+
+For production applications that need to stay running and receive real-time feature updates:
+
+```javascript
+const featureFlow = FeatureFlowSingleton.getInstance();
+await featureFlow.initialize('your-api-key');
+
+// The client will poll for updates every 10 seconds (configurable)
+// Features can be updated in the FeatureFlow dashboard and will be reflected immediately
+```
+
 ## Feature Setup
 
 To test the examples, create these features in your FeatureFlow dashboard:
