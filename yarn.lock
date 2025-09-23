@@ -112,10 +112,10 @@ fast-json-stable-stringify@^2.0.0:
   resolved "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
-featureflow-node-sdk@^0.6.14:
-  version "0.6.14"
-  resolved "https://registry.npmjs.org/featureflow-node-sdk/-/featureflow-node-sdk-0.6.14.tgz"
-  integrity sha512-7AZRgArjatvmNMvb02h2TIilzzoDaIPaSwdCsV9yaVIdtXlPfI/xvDRKs+Y19sjoSm1EsiG1ySdViCypOZchvQ==
+featureflow-node-sdk@^0.6.15:
+  version "0.6.15"
+  resolved "https://registry.npmjs.org/featureflow-node-sdk/-/featureflow-node-sdk-0.6.15.tgz"
+  integrity sha512-et+42fNttZGqIa4WaFbIWXIMhDd9tZudHVX+y4mZBCTOCCo97F5r+7S95O3xeIoi4H8BgZAeYsaDlEHKyxSqTw==
   dependencies:
     big-integer "^1.6.17"
     debug "^2.6.2"

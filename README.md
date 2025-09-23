@@ -106,6 +106,8 @@ node singleton-polling-example.js
 - Runs for 1 minute to show polling behavior
 - Graceful shutdown handling
 
+**⚠️ Setup Required:** Before running, you must set your API key in the `main()` function. Look for the `🔑 SET YOUR API KEY HERE 🔑` section in the code.
+
 ## 🔧 Configuration
 
 ### Environment Variables
