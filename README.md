@@ -4,7 +4,7 @@ Run a Node server with a singleton FeatureFlow client and a **GET /eval** endpoi
 
 ## Quick start
 
-1. **Prerequisites:** Node.js 12+, a [FeatureFlow](https://app.featureflow.io) account, and your Server Environment API key.
+1. **Prerequisites:** Node.js 12+, a [FeatureFlow](https://app.featureflow.com) account, and your Server Environment API key.
 
 2. **Clone and install:**
 
