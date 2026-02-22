@@ -29,10 +29,10 @@ That’s it. The server uses one shared client, a sample user, and evaluates all
 
 ## Troubleshooting
 
-- **Client not ready / init errors:** Check your API key and network. Use the Server Environment API key from [app.featureflow.io](https://app.featureflow.io).
+- **Client not ready / init errors:** Check your API key and network. Use the Server Environment API key from [app.featureflow.io](https://app.featureflow.com).
 - **Unexpected feature results:** Check rules and user attributes in the FeatureFlow dashboard.
 
-[Documentation](https://docs.featureflow.io) · [Node.js SDK](https://docs.featureflow.io/docs/nodejs-sdk) · [Dashboard](https://app.featureflow.io)
+[Documentation](https://docs.featureflow.io) · [Node.js SDK](https://github.com/featureflow/featureflow-node-sdk/blob/master/README.md) · [Dashboard](https://app.featureflow.com)
 
 ## License
 
