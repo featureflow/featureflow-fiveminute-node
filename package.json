@@ -1,17 +1,10 @@
 {
   "name": "featureflow-fiveminute-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive 5-minute example to get you up and running with the FeatureFlow Node.js SDK",
-  "main": "helloworld.js",
+  "main": "server.js",
   "scripts": {
-    "start:basic": "node helloworld.js",
-    "start:user": "node helloworldWithUser.js",
-    "start:registration": "node helloworldWithUserAndFeatureRegistration.js",
-    "start:advanced": "node advanced-example.js",
-    "start:singleton": "node singleton-polling-example.js",
-    "start:singleton:staging": "FEATUREFLOW_ENVIRONMENT=staging node singleton-polling-example.js",
-    "start:singleton:development": "FEATUREFLOW_ENVIRONMENT=development node singleton-polling-example.js",
-    "start:all": "npm run start:basic && npm run start:user && npm run start:registration && npm run start:advanced",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

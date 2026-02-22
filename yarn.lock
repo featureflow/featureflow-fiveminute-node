@@ -17,7 +17,7 @@ asn1@~0.2.3:
   resolved "https://registry.npmjs.org/asn1/-/asn1-0.2.3.tgz"
   integrity sha512-6i37w/+EhlWlGUJff3T/Q8u1RGmP5wgbiwYnOnbOqvtrPxT63/sYFyP9RcpxtxGymtfA075IvmOnL7ycNOWl3w==
 
-assert-plus@^1.0.0, assert-plus@1.0.0:
+assert-plus@1.0.0, assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/assert-plus/-/assert-plus-1.0.0.tgz"
   integrity sha512-NfJ4UzBCcQGLDlQq7nHxH+tv3kyZ0hHQqF5BO6J7tNJeP5do1llPr8dZ8zHonfhAu0PHAdMkSo+8o0wxg9lZWw==
@@ -97,7 +97,7 @@ extend@~3.0.2:
   resolved "https://registry.npmjs.org/extend/-/extend-3.0.2.tgz"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
-extsprintf@^1.2.0, extsprintf@1.3.0:
+extsprintf@1.3.0, extsprintf@^1.2.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/extsprintf/-/extsprintf-1.3.0.tgz"
   integrity sha512-11Ndz7Nv+mvAC1j0ktTa7fAb0vLyGGX+rMHNBYQviQDGU0Hw7lhctJANqbPhu9nV9/izT/IntTgZ7Im/9LJs9g==
@@ -112,10 +112,10 @@ fast-json-stable-stringify@^2.0.0:
   resolved "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
-featureflow-node-sdk@^0.6.15:
-  version "0.6.15"
-  resolved "https://registry.npmjs.org/featureflow-node-sdk/-/featureflow-node-sdk-0.6.15.tgz"
-  integrity sha512-et+42fNttZGqIa4WaFbIWXIMhDd9tZudHVX+y4mZBCTOCCo97F5r+7S95O3xeIoi4H8BgZAeYsaDlEHKyxSqTw==
+featureflow-node-sdk@^0.6.16:
+  version "0.6.16"
+  resolved "https://registry.yarnpkg.com/featureflow-node-sdk/-/featureflow-node-sdk-0.6.16.tgz#b5409dc94818287b1fef430c8a88f97210ca6205"
+  integrity sha512-V5DWQhcilSLLObar6GHn1pf66HRGnaTt8zA2t0jlgcmyFeDVIN5Q5/xRYt09gHxjAsrJrWhGsNnfhxBtwaN3Qw==
   dependencies:
     big-integer "^1.6.17"
     debug "^2.6.2"

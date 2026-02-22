@@ -5,7 +5,7 @@ This guide will help you configure the FeatureFlow examples for your environment
 ## Quick Setup
 
 1. **Get your API Key**
-   - Sign up at [FeatureFlow](https://app.featureflow.io)
+   - Sign up at [FeatureFlow](https://app.featureflow.com)
    - Create a new project
    - Go to your project settings
    - Copy your Server Environment API Key
@@ -60,62 +60,6 @@ var featureflow = new Featureflow.Client({
     apiKey: 'your-api-key'
 });
 ```
-
-### Advanced Configuration
-
-```javascript
-var featureflow = new Featureflow.Client({
-    apiKey: 'your-api-key',
-    timeout: 5000,                    // Client timeout in milliseconds
-    debug: true,                      // Enable debug logging
-    apiBaseUrl: 'https://api.featureflow.io'  // Custom API base URL
-});
-```
-
-### Environment-Specific Configuration
-
-For testing against different environments (staging, development), you can configure different API base URLs:
-
-```javascript
-// Environment-specific API URLs
-const apiBaseUrls = {
-    production: 'https://api.featureflow.io',
-    staging: 'https://staging-api.featureflow.io',
-    development: 'https://dev-api.featureflow.io'
-};
-
-// Use environment variable to determine which URL to use
-const environment = process.env.FEATUREFLOW_ENVIRONMENT || 'production';
-const config = {
-    apiKey: 'your-api-key',
-    debug: true
-};
-
-if (environment !== 'production' && apiBaseUrls[environment]) {
-    config.apiBaseUrl = apiBaseUrls[environment];
-}
-
-var featureflow = new Featureflow.Client(config);
-```
-
-### Testing Against Staging
-
-To test against staging URLs, you can:
-
-1. **Use environment variables:**
-   ```bash
-   FEATUREFLOW_ENVIRONMENT=staging node your-script.js
-   ```
-
-2. **Use npm scripts (if configured):**
-   ```bash
-   npm run start:singleton:staging
-   ```
-
-3. **Set environment in your code:**
-   ```javascript
-   process.env.FEATUREFLOW_ENVIRONMENT = 'staging';
-   ```
 
 ### Pre-registering Features
 
