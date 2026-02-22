@@ -5,8 +5,15 @@
  * 1. Creating a singleton FeatureFlow client
  * 2. Polling for feature updates every 10 seconds
  * 3. Real-time feature value changes
+ * 4. Environment-specific API endpoints (production, staging, development)
  * 
  * 🔑 SETUP: Set your API key in the main() function below
+ * 🌍 STAGING: Set FEATUREFLOW_ENVIRONMENT=staging to test against staging URLs
+ * 
+ * Usage:
+ *   node singleton-polling-example.js                    # Production
+ *   FEATUREFLOW_ENVIRONMENT=staging node singleton-polling-example.js    # Staging
+ *   FEATUREFLOW_ENVIRONMENT=development node singleton-polling-example.js # Development
  */
 
 const Featureflow = require('featureflow-node-sdk');
@@ -26,18 +33,35 @@ class FeatureFlowSingleton {
         return FeatureFlowSingleton.instance;
     }
     
-    async initialize(apiKey) {
+    async initialize(apiKey, environment = 'production') {
         if (this.isInitialized) {
             return this.client;
         }
         
         console.log('🚀 Initializing FeatureFlow client...');
         
-        this.client = new Featureflow.Client({
+        // Configure API base URL based on environment
+        const apiBaseUrls = {
+            production: 'https://api.featureflow.io',
+            staging: 'https://api.featureflow-staging.com',
+            development: 'http://localhost:8082'
+        };
+        
+        const config = {
             apiKey: apiKey,
-            pollingInterval: 10000, // Poll every 10 secondsfor this example, we recommend leaving the default for production to reduce traffic cost
+            pollingInterval: 10000, // Poll every 10 seconds for this example, we recommend leaving the default for production to reduce traffic cost
             debug: true
-        });
+        };
+        
+        // Add staging URL if not production
+        if (environment !== 'production' && apiBaseUrls[environment]) {
+            config.apiBaseUrl = apiBaseUrls[environment];
+            console.log(`🌍 Using ${environment} environment: ${config.apiBaseUrl}`);
+        } else {
+            console.log('🌍 Using production environment');
+        }
+        
+        this.client = new Featureflow.Client(config);
         
         return new Promise((resolve, reject) => {
             this.client.ready((error) => {
@@ -94,10 +118,17 @@ const featureFlow = FeatureFlowSingleton.getInstance();
 async function main() {
     try {
         // 🔑 SET YOUR API KEY HERE 🔑
-        const API_KEY = '{{YOUR_SERVER_ENVIRONMENT_API_KEY_HERE}}';
+        const API_KEY = 'srv-env-685e066dea464f88be14effbf65cf69c';
         
-        // Initialize the client
-        await featureFlow.initialize(API_KEY);
+        // 🌍 ENVIRONMENT CONFIGURATION 🌍
+        // Set to 'staging' or 'development' to test against staging URLs
+        // Available environments: 'production', 'staging', 'development'
+        const ENVIRONMENT = process.env.FEATUREFLOW_ENVIRONMENT || 'production';
+        
+        console.log(`🎯 Environment: ${ENVIRONMENT}`);
+        
+        // Initialize the client with environment
+        await featureFlow.initialize(API_KEY, ENVIRONMENT);
         
         console.log('⏰ Running for 2 minutes to demonstrate polling...');
         console.log('💡 Update features in your dashboard to see real-time changes!');

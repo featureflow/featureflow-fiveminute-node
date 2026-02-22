@@ -22,8 +22,33 @@ You can use environment variables to configure the examples:
 # Set your API key
 export FEATUREFLOW_API_KEY=your_server_environment_api_key_here
 
+# Set environment for staging/development testing
+export FEATUREFLOW_ENVIRONMENT=staging
+
 # Run the examples
 node helloworld.js
+```
+
+## Available Scripts
+
+The project includes npm scripts for easy testing:
+
+```bash
+# Basic examples
+npm run start:basic
+npm run start:user
+npm run start:registration
+npm run start:advanced
+
+# Singleton polling example
+npm run start:singleton
+
+# Staging environment testing
+npm run start:singleton:staging
+npm run start:singleton:development
+
+# Run all basic examples
+npm run start:all
 ```
 
 ## Configuration Options
@@ -46,6 +71,51 @@ var featureflow = new Featureflow.Client({
     apiBaseUrl: 'https://api.featureflow.io'  // Custom API base URL
 });
 ```
+
+### Environment-Specific Configuration
+
+For testing against different environments (staging, development), you can configure different API base URLs:
+
+```javascript
+// Environment-specific API URLs
+const apiBaseUrls = {
+    production: 'https://api.featureflow.io',
+    staging: 'https://staging-api.featureflow.io',
+    development: 'https://dev-api.featureflow.io'
+};
+
+// Use environment variable to determine which URL to use
+const environment = process.env.FEATUREFLOW_ENVIRONMENT || 'production';
+const config = {
+    apiKey: 'your-api-key',
+    debug: true
+};
+
+if (environment !== 'production' && apiBaseUrls[environment]) {
+    config.apiBaseUrl = apiBaseUrls[environment];
+}
+
+var featureflow = new Featureflow.Client(config);
+```
+
+### Testing Against Staging
+
+To test against staging URLs, you can:
+
+1. **Use environment variables:**
+   ```bash
+   FEATUREFLOW_ENVIRONMENT=staging node your-script.js
+   ```
+
+2. **Use npm scripts (if configured):**
+   ```bash
+   npm run start:singleton:staging
+   ```
+
+3. **Set environment in your code:**
+   ```javascript
+   process.env.FEATUREFLOW_ENVIRONMENT = 'staging';
+   ```
 
 ### Pre-registering Features
 
